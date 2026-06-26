@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="quality-assurance">
+  <title>Quality Assurance</title>
+  <prolog>
+    <author>Unknown</author>
+    <created date="2026-06-26T19:08:35.131261"/>
+    <revised modified="2026-06-26"/>
+    <metadata>
+    <keywords>
+      <keyword>concept</keyword>
+      <keyword>overview</keyword>
+      <keyword>introduction</keyword>
+      <keyword>quality</keyword>
+      <keyword>assurance</keyword>
+    </keywords>
+    </metadata>
+  </prolog>
+  <conbody>
+    <p>Ensure your DITA deliverables meet quality standards:</p>
+  </conbody>
+</concept>

@@ -1,0 +1,29 @@
+{
+  "skill_name": "dita-converter",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Convert the sample DITA guide Word document (sample-dita-guide.docx) to a complete DITA XML documentation set. Analyze the document structure, classify each major section into appropriate DITA topic types (concept, task, or reference), and generate well-formed XML files. Create a ditamap that links all topics hierarchically. Organize all outputs in the correct folder structure with topics in a /topics folder. Provide a conversion report summarizing the changes and decisions made.",
+      "expected_output": "A complete DITA project directory with: (1) Multiple .dita XML files properly typed as concept, task, or reference topics; (2) A project.ditamap file with hierarchical structure; (3) All files in correct folder structure (topics/, images/); (4) conversion-report.md documenting the conversion process; (5) All XML files that validate against DITA 1.3 DTD",
+      "files": ["samples/sample-dita-guide.docx"]
+    },
+    {
+      "id": 2,
+      "prompt": "Focus on extracting and validating the concept topics from the sample document. Specifically convert the 'Understanding DITA' section into a proper DITA concept topic. Ensure it includes proper semantic markup with <p>, <ul>, <table> elements. Include metadata with creation date and keywords. Verify the XML is well-formed.",
+      "expected_output": "A valid concept-understanding-dita.dita file with: (1) Proper concept DOCTYPE and root element; (2) Title and prolog with metadata; (3) Semantic markup for paragraphs, lists, and tables; (4) Well-formed XML that validates; (5) Topic ID and unique identifiers",
+      "files": ["samples/sample-dita-guide.docx"]
+    },
+    {
+      "id": 3,
+      "prompt": "Convert the 'Creating Your First DITA Topic' section into a DITA task topic. This section contains prerequisites and step-by-step instructions. Ensure proper task structure with <prereq>, <steps>, and <step> elements. Include code blocks as <codeblock> elements. Generate proper cross-references where applicable.",
+      "expected_output": "A valid task-creating-first-topic.dita file with: (1) Task DOCTYPE structure; (2) Prerequisites section properly marked; (3) Numbered steps with <steps><step> structure; (4) Code blocks with proper DITA codeblock elements; (5) Proper metadata and topic ID; (6) Valid XML",
+      "files": ["samples/sample-dita-guide.docx"]
+    },
+    {
+      "id": 4,
+      "prompt": "Extract the 'DITA Elements Reference' section and convert it to a DITA reference topic. This section contains reference tables with element information. Ensure proper table markup with thead/tbody structure. Verify all table data is correctly preserved.",
+      "expected_output": "A valid reference-dita-elements.dita file with: (1) Reference DOCTYPE; (2) Properly structured DITA tables with tgroup, thead, tbody; (3) All reference table data preserved; (4) Proper metadata; (5) Semantic markup for definitions",
+      "files": ["samples/sample-dita-guide.docx"]
+    }
+  ]
+}

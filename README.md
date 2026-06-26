@@ -2,7 +2,63 @@
 
 A practical proof of concept for converting Word documents to DITA-XML, applying brand terminology updates, and validating the output—all through a single Claude Code command.
 
-## What It Does
+---
+
+## New: DITA Converter Skill
+
+The **DITA Converter Skill** provides an intelligent, automated solution for converting Word documents and structured content into production-ready DITA XML documentation sets.
+
+### Quick Start
+
+Tell Claude to convert your document:
+
+```
+Convert my Word document (sample.docx) to DITA XML with proper concept, task, and reference topics.
+```
+
+### What You Get
+
+- **DITA XML Files** — Automatically classified into concept, task, and reference topics
+- **Navigation Map** — Hierarchical ditamap linking all topics
+- **Organized Output** — Topics in `/topics`, images in `/images`
+- **Conversion Report** — Detailed summary of conversion decisions and statistics
+
+### Key Features
+
+✓ **Intelligent Classification** — Analyzes content to classify topics as concept/task/reference  
+✓ **Semantic Markup** — Generates proper DITA elements (`<p>`, `<ul>`, `<codeblock>`, `<table>`, etc.)  
+✓ **Metadata Generation** — Adds author, creation date, and keywords to topics  
+✓ **Cross-Reference Support** — Creates xref links between related topics  
+✓ **Image Organization** — Automatically manages images in `/images` folder  
+✓ **Multi-Format Support** — Converts Word, Markdown, and plain text  
+
+### Example Conversion
+
+**Input:** Word document with sections like "Getting Started", "Step-by-Step Guide", "API Reference"
+
+**Output:**
+```
+dita-output/
+├── topics/
+│   ├── concept-getting-started.dita
+│   ├── task-step-by-step-guide.dita
+│   └── reference-api.dita
+├── images/
+│   └── [images from document]
+├── project.ditamap
+└── conversion-report.md
+```
+
+### For More Details
+
+- **User Guide:** See [`skills/dita-converter/USER_GUIDE.md`](skills/dita-converter/USER_GUIDE.md)
+- **Skill Definition:** See [`skills/dita-converter/SKILL.md`](skills/dita-converter/SKILL.md)
+
+---
+
+## Original Pipeline (PoC)
+
+The original proof of concept platform demonstrates:
 
 ```
 Word Document → Conversion → Rebranding → Validation → DITA-XML Output
@@ -40,6 +96,11 @@ bash prototype/validation-script.sh sample-data/output/Gmail_Installation_Guide-
 
 | Path | Purpose |
 |------|---------|
+| `skills/dita-converter/` | **NEW:** DITA Converter Skill — Converts documents to DITA XML |
+| `skills/dita-converter/SKILL.md` | Skill definition, trigger phrases, and detailed conversion workflow |
+| `skills/dita-converter/USER_GUIDE.md` | User guide with best practices and troubleshooting |
+| `skills/dita-converter/scripts/` | Python implementation for DITA conversion |
+| `skills/dita-converter/evals/` | Test cases and evaluation prompts |
 | `.claude/` | Claude Code plugin (command name: `/pipeline`) |
 | `prototype/` | Python converter, rebranding engine, and validation script |
 | `sample-data/input/` | Example Word documents for testing |
@@ -48,6 +109,7 @@ bash prototype/validation-script.sh sample-data/output/Gmail_Installation_Guide-
 | `docs/` | Quality criteria, workflow, assumptions, and sample metadata |
 | `results/` | Demo guides and validation summaries |
 | `validation/` | Formal test results and evidence |
+| `samples/` | Sample documents for testing (e.g., `sample-dita-guide.docx`) |
 
 ---
 

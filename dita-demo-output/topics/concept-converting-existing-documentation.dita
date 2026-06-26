@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="converting-existing-documentation">
+  <title>Converting Existing Documentation</title>
+  <prolog>
+    <author>Unknown</author>
+    <created date="2026-06-26T19:08:35.131261"/>
+    <revised modified="2026-06-26"/>
+    <metadata>
+    <keywords>
+      <keyword>concept</keyword>
+      <keyword>overview</keyword>
+      <keyword>introduction</keyword>
+      <keyword>converting</keyword>
+      <keyword>existing</keyword>
+    </keywords>
+    </metadata>
+  </prolog>
+  <conbody>
+    <p>Converting existing documentation from formats like Word or plain text to DITA requires a systematic approach. The conversion process involves:</p>
+    <p>Analyzing source content structure</p>
+    <p>Classifying content into DITA topic types</p>
+    <p>Creating appropriate XML markup</p>
+    <p>Organizing topics in a ditamap</p>
+    <p>Managing images and external resources</p>
+  </conbody>
+</concept>
